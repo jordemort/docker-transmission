@@ -28,7 +28,7 @@ FROM debian:bullseye-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y dumb-init gosu libcurl4 libssl1.1 libstdc++6
+RUN apt-get update && apt-get install -y dumb-init gosu libcurl4 libssl1.1 libstdc++6 && apt-get clean
 
 COPY --from=build /tmp/install/usr/local/ /usr/local/
 
