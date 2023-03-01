@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y build-essential cmake libcurl4-openssl-dev libssl-dev python3 python3.9-dev xz-utils
 
-ARG TRANSMISSION_VERSION=4.0.0
+ARG TRANSMISSION_VERSION=4.0.1
 ARG DIRNAME=transmission-${TRANSMISSION_VERSION}
 ARG TARBALL=${DIRNAME}.tar.xz
 ARG SRCDIR=/usr/src/${DIRNAME}
